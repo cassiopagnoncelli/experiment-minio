@@ -11,7 +11,7 @@ minio:
   bucket: <%= ENV['MINIO_BUCKET'] || 'app' %>
   endpoint: <%= ENV['MINIO_ENDPOINT'] || 'http://localhost:8520' %>
   access_key_id: <%= ENV['MINIO_ACCESS_KEY_ID'] || 'cassio' %>
-  secret_access_key: <%= ENV['MINIO_SECRET_ACCESS_KEY'] || '' %>
+  secret_access_key: <%= ENV.fetch('MINIO_SECRET_ACCESS_KEY') { raise "MINIO_SECRET_ACCESS_KEY is not set" } %>
   region: us-east-1
   force_path_style: true
 
