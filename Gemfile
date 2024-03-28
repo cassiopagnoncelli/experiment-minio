@@ -69,3 +69,5 @@ group :test do
 end
 
 gem "awesome_print"
+
+gem "aws-sdk-s3"
