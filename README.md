@@ -8,7 +8,8 @@ Storage.
 Spin up the server with
 
 ```sh
-MINIO_SECRET_ACCESS_KEY=password bin/rails s -p 3000
+export MINIO_SECRET_ACCESS_KEY=password
+bin/rails s -p 3000
 ```
 
 Go to the console to upload and download the file
